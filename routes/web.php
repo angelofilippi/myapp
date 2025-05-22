@@ -9,7 +9,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/product/{product:slug}', [ProductController::class, 'index'])->name('product');
 
-//Rotas do admin
+//Rotas do admin!
 
 Route::get('/admin/product', [AdminProductController::class, 'index']);
 
