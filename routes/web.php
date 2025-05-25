@@ -11,6 +11,11 @@ Route::get('/product/{product:slug}', [ProductController::class, 'index'])->name
 
 //Rotas do admin!
 
-Route::get('/admin/product', [AdminProductController::class, 'index']);
+Route::get('/admin/product', [AdminProductController::class, 'index'])->name('admin.product');
 
-Route::get('/admin/edit', [AdminProductController::class, 'edit']);
+Route::get('/admin/product/edit', [AdminProductController::class, 'edit'])->name('admin.product.edit');
+
+Route::get('/admin/product/create', [AdminProductController::class, 'create'])->name('admin.product.create');
+
+Route::post('/admin/product', [AdminProductController::class, 'store'])->name('admin.product.store');
+
